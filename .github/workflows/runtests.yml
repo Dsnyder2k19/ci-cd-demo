@@ -1,0 +1,12 @@
+name: Run JUnit Tests (Gradle)
+on: [push]
+jobs:
+  build:
+    name: Run Tests
+    run -on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@va
+        java -version: '11'
+      - name: Run Tests
+        run: gradle clean test
